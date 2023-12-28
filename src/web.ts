@@ -7,4 +7,12 @@ export class MotionPluginWeb extends WebPlugin implements MotionPluginPlugin {
     console.log('ECHO', options);
     return options;
   }
+
+  async startActivityUpdates(): Promise<{
+    confidence: number;
+    activity: string;
+  }> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+
 }

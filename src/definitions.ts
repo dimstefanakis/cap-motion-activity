@@ -1,4 +1,7 @@
 export interface MotionPluginPlugin {
   echo(options: { value: string }): Promise<{ value: string }>;
-  startActivityUpdates(): Promise<void>;
+  startActivityUpdates(): Promise<{
+    confidence: number;
+    activity: string;
+  }>;
 }
